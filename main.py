@@ -106,7 +106,7 @@ def check_eligibility_api(slug, address):
         "x-api-key": OPENSEA_API_KEY
     }
     payload = {
-        "minter_address": address,
+        "minter": address,
         "quantity": 1
     }
     response = requests.post(url, headers=headers, json=payload)
